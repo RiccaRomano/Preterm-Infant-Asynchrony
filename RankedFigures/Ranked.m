@@ -1,4 +1,8 @@
-addpath('C:/Users/rfita/OneDrive/Documents/MATLAB/Chest Vest Code/Copy_of_Sensitivity_TAA_AJP_Fixed_Sampling/Morris_VE-SA_Vdot/');
+mydir  = pwd;
+idcs   = strfind(mydir,'\');
+newdir = mydir(1:idcs(end)-1);
+adddir=[newdir '\Morris_VE-SA_Vdot\'];
+addpath(adddir);
 fig=figure(1);
 
 pl=tiledlayout(1,3);
@@ -49,8 +53,9 @@ tex.FontWeight='bold';
 tex.LineStyle="none";
 
 
-rmpath('C:/Users/rfita/OneDrive/Documents/MATLAB/Chest Vest Code/Copy_Of_Sensitivity_TAA_AJP_Fixed_Sampling/Morris_VE-SA_Vdot/');
-addpath('C:\Users\rfita\OneDrive\Documents\MATLAB\Chest Vest Code\Copy_Of_Sensitivity_TAA_AJP_Fixed_Sampling\Morris_TAA-SA_Vrc_Vab\');
+rmpath(adddir);
+adddir=[newdir '\Morris_TAA-SA_Vrc_Vab\'];
+addpath(adddir);
 nexttile
 sims=[0 1 2 3 4 5 6 7 8 9];
 all_sens=[];
@@ -82,8 +87,9 @@ tex.LineStyle="none";
 
 
 
-rmpath('C:\Users\rfita\OneDrive\Documents\MATLAB\Chest Vest Code\Copy_Of_Sensitivity_TAA_AJP_Fixed_Sampling\Morris_TAA-SA_Vrc_Vab\');
-addpath('C:\Users\rfita\OneDrive\Documents\MATLAB\Chest Vest Code\Copy_Of_Sensitivity_TAA_AJP_Fixed_Sampling\Morris_TAA_VE-SA_Vrc_Vab_Vdot\');
+rmpath(adddir);
+adddir=[newdir '\Morris_TAA_VE-SA_Vrc_Vab_Vdot\'];
+addpath(adddir);
 nexttile
 sims=[0 1 2 3 4 5 6 7 8 9];
 all_sens=[];
